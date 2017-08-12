@@ -1,0 +1,77 @@
+hierarchy of operators:
+PEMDAS
+In python , // is used to round off 
+            ** is used to calculate power 
+
+Variables-> it is a placeholder for some value
+ variablename = value
+
+String -> basically means text , and should be included between quotes
+a="hey "
+to print stuff -> 
+print("___")
+
+to printout raw string i.e, without considering escape characters,etc include r :
+print(r"___")
+
+we can also add as well as multiply strings together in python
+
+Accessing characters in strings:
+a[0,1,2,...]    OR   a[-1,-2,-3,....]
+
+Slicing characters:
+         a[start:end-1]
+         a[:]   gives entire string
+
+len(a)  ->   gives length of our string
+
+making LIST->  
+
+listname =[1,2,3,...]
+we can change its entry as: listname[2]=new value      (we can also replace multiple items using _:_)
+we can also delete items by setting it equal to empty []
+we can add new entries to our list as: listname + [6,3,5,6]
+but this process is temporary so in order to do it permanently:
+listname.append(one argument)
+We can also slice our lists
+
+**Identation is very important in python 
+1. if condition:
+        print("__")
+
+2.if condition is ___:                     {when dealing with numbers use is while with    
+      print("___")
+  elif condition is __:                       numbers use relational operators}
+       print("__") 
+If none of them is true then use
+   else:
+       print("__")
+
+for variable in listname:
+     print(variable)
+
+
+**RANGE: loop without list
+for variable in range(5);
+     print("__")
+
+we can also give range of numbers :
+  range(begin,end,how much increment)
+
+**while loop run until condition become false
+while condition :
+    print(variable)
+
+to stop loop we use increment conditions so that after some execution condition gets false .
+
+Comments: #........(single line)
+          ***..........
+             ............***
+
+
+whenever we want to print no. with string then use comma:
+print("hi",5)
+
+break -> stops loop and break execution
+
+continue ->  ignores certain items and continue execution
