@@ -75,3 +75,42 @@ print("hi",5)
 break -> stops loop and break execution
 
 continue ->  ignores certain items and continue execution
+
+Functions: set of codes which are written for our comfort as we don't 've to over n over again
+Defining function: 
+    def functionname ():                  
+         line of code                         
+         __________
+         print('___')
+
+To use this function:
+ functionname()
+
+ inside paranthesis we provide extra info declaring variable,etc
+ def sum(a):
+     ans=a+3
+      print(ans)
+On calling:
+sum(2)        it gives 5
+
+Return-> it is use to use our calculated value further
+def sum(a):
+     ans=a+3
+      return ans
+d=sum(2)
+def mult(c)
+      pro=c*d
+after calling:
+ mult(5)
+
+Setting default value:
+def gender(sex='unknown'):
+    if sex is 'm':
+         sex='male'
+    elif sex is 'f':
+         sex='female'
+    print(sex)
+
+ gender('m')   -> gives male
+ gender('f')   -> gives female
+ gender()   -> gives default i.e, unknown
