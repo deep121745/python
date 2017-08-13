@@ -103,7 +103,7 @@ def mult(c)
 after calling:
  mult(5)
 
-Setting default value:
+Setting default arguments:
 def gender(sex='unknown'):
     if sex is 'm':
          sex='male'
@@ -114,3 +114,120 @@ def gender(sex='unknown'):
  gender('m')   -> gives male
  gender('f')   -> gives female
  gender()   -> gives default i.e, unknown
+
+
+KEYWORD ARGUMENTS:
+def sentence(name='jay',action='ate',item='food'):
+     print(name,action,item)
+
+sentence()                                         -->this prints default argument
+sentence('john','is','good')                        -->prints keyword argument
+we can also change selected arguments leaving default argument as such:
+sentence(item='play',action='likes to')
+
+FUNCTION THAT CAN TAKE ANY NUMBER OF ARGUMENTS   (flexible aruments) :
+def add(*args):             (means there can be any number of arguments)
+    total=0
+    for a in args:
+        total+=a
+    print(total)
+
+add (2,3)
+add (3,4,5,6..)         can add any number of parameters
+
+UNPACKING ARGUMENTS:
+def health_calculator(age;apples_ate,smoking)
+     answer=(100-age)+(apples_ate*1.8)-(smoking*1.6)
+     print(answer)
+
+deep_data={21,8,0}
+
+health_calculator(deep_data[0],deep_data[1],deep_data[2])
+but there is a shortcut to this which is called unpacking arguments**
+health_calculator(*deep_data)
+
+Set -> is a collection of items but it can't have any duplicates like list can :
+grocery={'bear','milk','apple','bear'}
+here bear has its duplicate so it prints bear only one time but in case of list it prints items as it is .
+USE {} WITH SETS AND [] WITH LIST
+
+DICTIONARY IN PYTHON:
+dictionary in python have keys and values as normal dictionary has words and their definitions
+SYNTAX: dictionaryname ={key:value,key2:value,..............}
+
+classmate = {'John':'is great','Jay':'is confused'}
+print(classmate)                            -> prints entire dictionary 
+print(classmate['Jay'])                      -> prints particular key value
+
+in order to access more items in dictionary:
+
+for k,v in classmate.items():
+     print(k+v)
+
+
+MODULES:  very often we need to use particular block of codes not only in same programs but also in other programs so it is better to store those codes in a particular file 
+(function included in other file)
+in order to use module first create a new python file with py extension:
+def name():
+    print('jay')
+
+so in order to use it go to main file:
+import filename
+filename.name()
+
+we can also import other people's module (prestored or can be downloaded from internet)
+
+import random
+x= random.randrange[1,100]
+print(x)
+
+****
+Program to download an image from internet:
+import random             --->whenever we download images we've to give them a random name
+                                          as we don't wanna to name a bunch of whole as same
+import urllib.request               ---> package which allows to get data from website
+
+def download_webimage(url):                        
+    name= random.randrange[1,1000]
+    full_filename= str(name)+.jpeg                -->adding .jpeg extension as it is   
+                                                        downloaded as number
+    urllib.request urlretrieve(url,full_filename)   -->using our module
+
+download_webimage(urlofsomejpeg)
+
+***HOW TO READ AND WRITE FILES:
+creating a file:
+fileobject=open('filenameuwannacreate','w')        ---> prepare a file to be created 
+                                                      and w prepare to get write in it
+fileobject.write('write stuff here\n')              --> writing on it
+fileobject.write('more stuff ')
+fileobject.close()                          -->doesn't take any parameter it just free's    
+                                              space in our memory
+(usually we use fw as fileobject here and fr in case to read file)
+To read file:
+fr=open('filename','r')         -->r specifies that we want to read  
+text=fr.read()                  -->so in order to work on it we store it in variable
+print(text)
+fr.close()                        --> closes our object                     
+
+DOWNLOADING FILES FROM INTERNET :
+First as an example get url of some csv file from yahoo finance 
+
+from urlib import request               -->just another way of importing
+goog_url = '_____________'               -->store huge url to some variable
+
+def download_stock_data(csv_url):
+    response = request.urlopen(csv_url)    --> connects to internet
+    csv = response.read()
+    csv_str =str(csv)
+    lines = csv_str.split('\\n')         -->splits after every new cahracter
+    dest_url= r'goog.csv'                 --> sets destination in our local
+    fx = open(dest_url,'w')
+    for line in lines:
+         fx.write(line+'\n')
+    fx.close()
+
+    download_stock_data(goog_url)
+
+
+
