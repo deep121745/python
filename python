@@ -230,4 +230,20 @@ def download_stock_data(csv_url):
     download_stock_data(goog_url)
 
 
-
+MORE ON LIST:
+let our list name is arr
+1. append(x) : adds single element to list
+2. extend(L) : merges another listL to end
+    can add multiple elements
+    arr.extend([3,4])
+3. insert(i,x) : insert x at index i
+arr.insert(i,x)
+4. remove(x) : removes first occurence of element x 
+arr.remove(x)
+5. pop() : removes last element of list. If an argument is passed , that index item is poped out. 
+arr.pop()
+6. index(x): returns first index of a value in the list.
+arr.index(x)
+7. count(x): counts no. of occurence of an element x
+8.sort(): sorts the list
+9. reverse() : reverses the list
